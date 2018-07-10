@@ -1,0 +1,116 @@
+html 
+{
+  height: 100%;
+}
+
+body 
+{
+  margin: 0 auto;
+  height: 100%;
+  color: white;
+  font-size: 24px;
+}
+
+#box, .content
+{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header, .left, .center, .right, .footer
+{
+    text-align: center;
+}
+
+.header 
+{
+  background: red;
+  padding: 10px;
+}
+
+.left 
+{
+  height: 100%;
+  background: green;
+}
+
+.center 
+{
+  height: 100%;
+  background: lightblue;
+  overflow: hidden;
+  order: -1;
+}
+
+.right 
+{
+  height: 100%;
+  background: pink;
+}
+
+.footer 
+{
+  background: violet;
+  padding: 10px;
+}
+
+/*MEDIA POW. 768PX */
+@media (min-width: 768px) 
+{
+  .content 
+    {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .center 
+    {
+    flex: 2;
+    height: 50%;
+    }
+  
+  .left 
+    {
+    width: 100%;
+    flex-basis: 100%;
+    order: 1;
+    height: 50%;
+    }
+  
+  .right 
+    {
+    height: 50%;
+    }
+}
+
+/*MEDIA POW. 992PX */
+
+@media (min-width: 992px) 
+{
+  #box 
+    {
+    height: 540px;
+    flex-wrap: nowrap;
+    }
+  
+  .left 
+    {
+    order: 0;
+    height: 100%;
+    flex: 1;
+    }
+  
+  .center 
+    {
+    order: 0;
+    height: 100%;
+    flex: 3;
+    }
+  
+  .right 
+    {
+    height: 100%;
+    flex: 1;
+    }
+}
